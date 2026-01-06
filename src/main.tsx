@@ -5,7 +5,6 @@ import { routeTree } from './routeTree.gen.ts'
 
 import './styles.css'
 
-// Create a new router instance
 const router = createRouter({
   routeTree,
   context: {},
@@ -13,6 +12,7 @@ const router = createRouter({
   scrollRestoration: true,
   defaultStructuralSharing: true,
   defaultPreloadStaleTime: 0,
+  basepath: import.meta.env.VITE_BASE || '/'
 })
 
 declare module '@tanstack/react-router' {
