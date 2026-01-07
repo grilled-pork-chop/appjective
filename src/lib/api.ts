@@ -109,7 +109,6 @@ export const api = {
     limit: number = 30,
     offset: number = 0
   ): Promise<PaginatedResponse<SubObjective>> => {
-    await delay(200)
 
     const allSubObjectives = generateSubObjectives(objectiveId)
     const data = allSubObjectives.slice(offset, offset + limit)
